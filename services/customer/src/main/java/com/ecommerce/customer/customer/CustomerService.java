@@ -1,5 +1,6 @@
 package com.ecommerce.customer.customer;
 
+import com.ecommerce.customer.customer.exceptions.CustomerNotFoundException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang.StringUtils;

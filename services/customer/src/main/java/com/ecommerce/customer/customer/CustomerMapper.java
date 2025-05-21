@@ -17,4 +17,14 @@ public class CustomerMapper {
                 .firstName(createCustomerRequest.firstName())
                 .build();
     }
+
+    public CustomerResponse toCustomerResponse(Customer customer){
+        return CustomerResponse.builder()
+                .address(customer.getAddress())
+                .email(customer.getEmail())
+                .lastName(customer.getLastName())
+                .firstName(customer.getFirstName())
+                .id(customer.getId())
+                .build();
+    }
 }

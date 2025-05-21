@@ -2,7 +2,11 @@ package com.ecommerce.customer.customer;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -23,8 +27,28 @@ public class CustomerService {
     }
 
     private void mergeCustomer(Customer customer, @Valid CreateCustomerRequest createCustomerRequest) {
+        if (StringUtils.isNotBlank(createCustomerRequest.email())){
+            customer.setEmail(createCustomerRequest.email());
+        }
 
+        if (StringUtils.isNotBlank(createCustomerRequest.firstName())){
+            customer.setFirstName(createCustomerRequest.firstName());
+        }
+
+        if (StringUtils.isNotBlank(createCustomerRequest.lastName())){
+            customer.setLastName(createCustomerRequest.lastName());
+        }
+
+        if (createCustomerRequest.address() != null){
+            customer.setAddress(createCustomerRequest.address());
+        }
     }
 
 
+    public List<CustomerResponse> findAllCustomers() {
+        return customerRepository.findAll()
+                .stream()
+                .map(customerMapper::toCustomerResponse)
+                .collect(Collectors.toList());
+    }
 }

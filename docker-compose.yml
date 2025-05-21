@@ -14,6 +14,9 @@ services:
       - microservices-net
     restart: unless-stopped
 
+#  root@62b73e7977cf:/# psql -U alvine -h localhost -p 5432
+
+
 
   pgadmin:
     container_name: ms_pgadmin

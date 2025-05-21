@@ -63,7 +63,7 @@ public class CustomerService {
                 .orElseThrow(()-> new CustomerNotFoundException("Customer Not Found "));
     }
 
-    public Void deleteCustomer(String customerId) {
+    public void deleteCustomer(String customerId) {
         customerRepository.deleteById(customerId);
     }
 }

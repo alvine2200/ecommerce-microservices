@@ -44,11 +44,25 @@ public class CustomerService {
         }
     }
 
-
     public List<CustomerResponse> findAllCustomers() {
         return customerRepository.findAll()
                 .stream()
                 .map(customerMapper::toCustomerResponse)
                 .collect(Collectors.toList());
+    }
+
+
+    public Boolean checkIfCustomerExists(String customerId) {
+        return customerRepository.existsById(customerId);
+    }
+
+    public CustomerResponse findCustomerById(String customerId) {
+        return customerRepository.findById(customerId)
+                .map(customerMapper::toCustomerResponse)
+                .orElseThrow(()-> new CustomerNotFoundException("Customer Not Found "));
+    }
+
+    public Void deleteCustomer(String customerId) {
+        customerRepository.deleteById(customerId);
     }
 }

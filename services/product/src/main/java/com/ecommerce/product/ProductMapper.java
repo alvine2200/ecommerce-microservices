@@ -42,6 +42,7 @@ public class ProductMapper {
                 .name(product.getName())
                 .price(product.getPrice())
                 .quantity(quantity)
+
                 .build();
     }
 }

@@ -1,7 +1,7 @@
 package com.ecommerce.product;
 
-import com.ecommerce.product.exceptions.ProductNotFoundException;
-import com.ecommerce.product.exceptions.ProductPurchaseException;
+import com.ecommerce.exceptions.ProductNotFoundException;
+import com.ecommerce.exceptions.ProductPurchaseException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

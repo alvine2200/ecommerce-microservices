@@ -39,7 +39,7 @@ public class ProductService {
 
         var purchasedProducts = new ArrayList<ProductPurchaseResponse>();
 
-        for (int i = 0; i < purchasedProducts.size(); i++) {
+        for (int i = 0; i < storedProducts.size(); i++) {
             var product = storedProducts.get(i);
             var productRequest = storedRequests.get(i);
 

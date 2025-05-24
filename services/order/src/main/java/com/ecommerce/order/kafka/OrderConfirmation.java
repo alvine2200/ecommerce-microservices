@@ -1,7 +1,8 @@
-package com.ecommerce.order.order;
+package com.ecommerce.order.kafka;
 
 import com.ecommerce.order.customer.CustomerResponse;
 import com.ecommerce.order.enums.PaymentMethod;
+import com.ecommerce.order.order.PurchaseResponse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

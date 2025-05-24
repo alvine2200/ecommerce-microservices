@@ -1,6 +1,5 @@
 package com.ecommerce.order.kafka;
 
-import com.ecommerce.order.order.OrderConfirmation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;

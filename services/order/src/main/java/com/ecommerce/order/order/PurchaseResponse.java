@@ -1,4 +1,4 @@
-package com.ecommerce.order;
+package com.ecommerce.order.order;
 
 import java.math.BigDecimal;
 

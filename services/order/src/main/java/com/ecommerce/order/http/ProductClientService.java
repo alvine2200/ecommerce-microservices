@@ -1,9 +1,8 @@
 package com.ecommerce.order.http;
 
-import com.ecommerce.order.PurchaseResponse;
+import com.ecommerce.order.order.PurchaseResponse;
 import com.ecommerce.order.exceptions.BusinessException;
 import com.ecommerce.order.order.PurchaseRequest;
-import jdk.jfr.ContentType;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;

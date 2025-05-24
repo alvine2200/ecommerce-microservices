@@ -11,8 +11,8 @@ spring:
       ddl-auto: update
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-application:
-  config:
-    customer-url: http://localhost:8822/api/v1/customers
-    product-url: http://localhost:8822/api/v1/products
-    payment-url: http://localhost:8822/api/v1/payments
+  application:
+   config:
+      customer-url: http://localhost:8822/api/v1/customers
+      product-url: http://localhost:8822/api/v1/products
+      payment-url: http://localhost:8822/api/v1/payments

@@ -1,14 +1,14 @@
 server:
-  port: 8899
+  port: 8070
 spring:
   datasource:
-    url: jdbc:postgresql//localhost:5433/orders
-    username: alvine
-    password: password
     driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/order
+    username: alibou
+    password: alibou
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   kafka:
@@ -17,9 +17,10 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
-        spring.json.type.mapping: orderConfirmation:com.ecommerce.order.kafka.OrderConfirmation
+        spring.json.type.mapping: orderConfirmation:com.alibou.ecommerce.kafka.OrderConfirmation
+
 application:
   config:
-    customer-url: http://localhost:8822/api/v1/customers
-    product-url: http://localhost:8822/api/v1/products
-    payment-url: http://localhost:8822/api/v1/payments
+    customer-url: http://localhost:8222/api/v1/customers
+    payment-url: http://localhost:8222/api/v1/payments
+    product-url: http://localhost:8222/api/v1/products

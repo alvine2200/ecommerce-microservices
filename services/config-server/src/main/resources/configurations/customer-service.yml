@@ -1,11 +1,11 @@
 server:
-  port: 8889
+  port: 8090
 spring:
   data:
     mongodb:
       username: alvine
       password: password
       host: localhost
-      database: customer
       port: 27017
+      database: customer
       authentication-database: admin
